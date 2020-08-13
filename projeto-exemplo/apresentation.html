@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>
+        Meu site 
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class='logo'>
+        <img id='monkey' src="monkey.png" height='70'>
+        <div class='link'>
+            <a class='blocos' href="#div1">Sobre mim</a>
+            <a class='blocos' href="#div2">Minhas habilidades</a>
+            <a class='blocos' href="#div3">Fale comigo!</a>
+        </div>
+    </div>
+    <div id='div1' class="caixa1">
+        <h1> Pedro Lopes </h1>
+        <p> Meu nome é Pedro<br>Tenho 21 anos</br>
+            Estudo Engenharia de Computação</p>
+        <img id='eu' src="pedro.jpg" height='160' onclick="night()" aria-label="night-mode">
+    </div>
+    <div id='div2' class="skills">
+        <h2>
+            Minhas Habilidades
+        </h2>
+        <div class='caixa2'>
+            <div class="box">
+                <img id='mini' src="frontend.png">
+                <h3>
+                    Front-end
+                </h3>
+                <p>
+                    Eu programo sites do zero, e levo ideias </br>
+                    do papel para o navegador, me </br>
+                    preocupando com a entrega final.
+                    <h4>
+                        Linguagens:
+                    </h4>
+                    HTML, CSS, JavaScript
+                    <h4>
+                        Ferramentas:
+                    </h4>
+                    <p>React</p> 
+                    <p>Redux</p> 
+                    <p>SASS</p> 
+                </p>
+            </div>
+            <div class="box">
+                <img id='mini' src="backend.png">
+                <h3>
+                    Back-end
+                </h3>
+                <p>
+                    Desenvolvo sistemas para dar suporte </br>
+                    aos produtos web, crio APIs e tenho boa </br>
+                    experiência com banco de dados.
+                    <h4>
+                        Tecnologias:
+                    </h4>
+                    Node.js, REST, SQL
+                    <h4>
+                        Ferramentas:
+                    </h4>
+                    <p>Express</p> 
+                    <p>Postgres</p> 
+                    <p>Sequelize</p> 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id='div3' class="caixa3"> 
+        <h5>
+            Me manda uma mensagem :)
+        </h5>
+        <div class='send'>
+            <div>
+                <a id='whats' href="https://api.whatsapp.com/send?1=pt_BR&phone=5553999037982">
+                Mandar um WhatsApp
+                </a>
+            </div>      
+        </div>
+        <p id='p2'>
+            Ou então fale comigo pelo <a id='face' href="https://www.facebook.com/profile.php?id=100004054429608">Facebook</a>!
+        </p>
+    </div>
+    <script>
+        var caixa2 = document.getElementsByClassName('caixa1')[0]
+        var caixa3 = document.getElementsByClassName('caixa3')[0]
+        var send = document.getElementById('p2')
+        var logo = document.querySelectorAll(".blocos")
+        function night(){
+            if(caixa2.style.color != 'white'){
+                document.body.style.background = '#333333'
+                caixa2.style.color = 'white'
+                caixa3.style.background = '#333333'
+                caixa3.style.color = 'white'
+                send.style.color = 'white'
+                for (i = 0; i < logo.length; i++) {
+                    logo[i].style.color = "white"
+                }
+            }
+            else{
+                for (i = 0; i < logo.length; i++) {
+                    logo[i].style.color = "#4C556A"
+                }
+                document.body.style.background = 'white'
+                caixa2.style.color = '#4C556A'
+                caixa3.style.background = 'white'
+                caixa3.style.color = '#4C556A'
+                send.style.color = '#4C556A'
+
+            }
+        }
+    </script>
+</body>
+
+</html>
